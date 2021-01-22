@@ -54,7 +54,43 @@ The error happens only in production after the project has been published to IIS
 
 # Attachements
 
+## StackTrace
+
+
+```
+System.IO.FileLoadException: 
+File name: 'Flee.NetStandard20, Version=1.0.0.0, Culture=neutral, PublicKeyToken=85238e57c1c34b81'
+   at Kraken.Bugreport.FileLoadException.Asp.FleeAdapter.Calculate(String formula, Dictionary`2 parameter)
+   at Kraken.Bugreport.FileLoadException.Core.BusinessLogicHandler.Handle(String formula, Dictionary`2 parameter) in D:\_src\temp\Kraken.Bugreport.FileLoadException.Asp\Kraken.Bugreport.FileLoadException.Core\BusinessLogicHandler.cs:line 18
+   at Kraken.Bugreport.FileLoadException.Asp.Controllers.ImpersonateDemoController.<>c__DisplayClass4_0.<UseImpersonation>b__0() in D:\_src\temp\Kraken.Bugreport.FileLoadException.Asp\Kraken.Bugreport.FileLoadException.Asp\Controllers\ImpersonateDemoController.cs:line 46
+   at System.Security.Principal.WindowsIdentity.<>c__DisplayClass67_0.<RunImpersonatedInternal>b__0(Object <p0>)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Security.Principal.WindowsIdentity.RunImpersonatedInternal(SafeAccessTokenHandle token, Action action)
+   at System.Security.Principal.WindowsIdentity.RunImpersonated(SafeAccessTokenHandle safeAccessTokenHandle, Action action)
+   at Kraken.Bugreport.FileLoadException.Asp.Controllers.ImpersonateDemoController.RunImpersonatedIfRequired(Action action) in D:\_src\temp\Kraken.Bugreport.FileLoadException.Asp\Kraken.Bugreport.FileLoadException.Asp\Controllers\ImpersonateDemoController.cs:line 66
+   at Kraken.Bugreport.FileLoadException.Asp.Controllers.ImpersonateDemoController.UseImpersonation() in D:\_src\temp\Kraken.Bugreport.FileLoadException.Asp\Kraken.Bugreport.FileLoadException.Asp\Controllers\ImpersonateDemoController.cs:line 43
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+```
+
 ## Configuration on IIS
 
-
+![iisconfig](https://github.com/Der-Kraken/Kraken.Bugreport.FileLoadException.Asp/blob/master/blob/apppoolconfig.png?raw=true)
 
