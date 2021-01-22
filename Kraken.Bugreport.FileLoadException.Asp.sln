@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kraken.Bugreport.FileLoadException.Asp", "Kraken.Bugreport.FileLoadException.Asp\Kraken.Bugreport.FileLoadException.Asp.csproj", "{562912F5-3ED9-4130-893D-9AE06C894ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kraken.Bugreport.FileLoadException.Share", "Kraken.Bugreport.FileLoadException.Share\Kraken.Bugreport.FileLoadException.Share.csproj", "{2AE51CD8-7DAD-445B-A933-C3F385C78507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kraken.Bugreport.FileLoadException.Core", "Kraken.Bugreport.FileLoadException.Core\Kraken.Bugreport.FileLoadException.Core.csproj", "{5F0B9EC4-A19C-4D26-8C27-8BCA030D3D71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{562912F5-3ED9-4130-893D-9AE06C894ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562912F5-3ED9-4130-893D-9AE06C894ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562912F5-3ED9-4130-893D-9AE06C894ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562912F5-3ED9-4130-893D-9AE06C894ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE51CD8-7DAD-445B-A933-C3F385C78507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE51CD8-7DAD-445B-A933-C3F385C78507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE51CD8-7DAD-445B-A933-C3F385C78507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE51CD8-7DAD-445B-A933-C3F385C78507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0B9EC4-A19C-4D26-8C27-8BCA030D3D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0B9EC4-A19C-4D26-8C27-8BCA030D3D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0B9EC4-A19C-4D26-8C27-8BCA030D3D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0B9EC4-A19C-4D26-8C27-8BCA030D3D71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC4625CC-A40C-43AA-B423-18DB91EBF9FA}
+	EndGlobalSection
+EndGlobal
