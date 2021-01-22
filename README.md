@@ -1,7 +1,9 @@
 # Kraken.Bugreport.FileLoadException.Asp
-App to reproduce a bug if running code impersonated on IIS.
+App to reproduce a bug if running code (which dynamically load binaries) impersonated on IIS.
 
 _The project based on Asp.Net-Core 3.1 (but the error occurrs in dot.Net 5 too)._
+
+Issue-Ticket on aspnetcore: https://github.com/dotnet/aspnetcore/issues/29527
 
 # Details
 This a a small project to reproduce an error which occurrs in our production one. 
