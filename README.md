@@ -21,7 +21,7 @@ Instead there is used a nuget called Flee (we using that nuget in the real proje
 
 ## Explanation of the Problem
 
-The error reason ist because the webfolder on wwwroot is readable only for the apppool user. When IIS starts the app then dot.Net loads some binaries but not all (just in time). 
+The error reason is because the webfolder on wwwroot is readable only for the apppool user. When IIS starts the app then dot.Net loads some binaries but not all (just in time). 
 If the code which runs impersonated try to load an binary (because it is the first who access is) then dot.Net will throw an FileLoadException because reading the binaries is not allowed for common end users.
 
 Our workaround is to allow end users acessing wwwroot. But that is a security problem.
