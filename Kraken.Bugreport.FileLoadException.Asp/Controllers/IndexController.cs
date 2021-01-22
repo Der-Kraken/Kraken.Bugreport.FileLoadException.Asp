@@ -7,12 +7,12 @@ using System.Security.Principal;
 namespace Kraken.Bugreport.FileLoadException.Asp.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class ImpersonateDemoController : ControllerBase
+    [Route("")]
+    public class IndexController : ControllerBase
     {
         private readonly IServiceProvider _serviceProvider;
 
-        public ImpersonateDemoController(IServiceProvider serviceProvider)
+        public IndexController(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
         }
@@ -20,8 +20,11 @@ namespace Kraken.Bugreport.FileLoadException.Asp.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            var linkA = "<a href=\"ImpersonateDemo/withoutimpersonation\">- Without Impersonation</a>";
-            var linkB = "<a href=\"ImpersonateDemo/useimpersonation\">- Use Impersonation</a>";
+            var a = Url.Action(nameof(WithoutImpersonation));
+            var b = Url.Action(nameof(UseImpersonation));
+
+            var linkA = $"<a href=\"{a}\">- Without Impersonation</a>";
+            var linkB = $"<a href=\"{b}\">- Use Impersonation</a>";
 
             return Content($"<html><body>{linkA}</br></br>{linkB}</body></html>", "text/html");
         }
